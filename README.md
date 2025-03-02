@@ -1,46 +1,152 @@
-# Getting Started with Create React App
+# ✨ jenn's wardrobe
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+a cute closet organization app built with React, TypeScript, and styled-components. organize your wardrobe items by category with a beautiful pastel interface and track how often you wear each item.
 
-## Available Scripts
+## 🌸 features
 
-In the project directory, you can run:
+- upload and display wardrobe items by category
+- categorize items into tops, bottoms, shoes, and accessories
+- track how many times each item has been worn
+- modern, responsive grid layout
+- cute pastel pink and purple theme
+- montserrat font with lowercase styling
+- hover effects and smooth transitions
+- collapsible sidebar navigation
+- sqlite database for data persistence
+- custom styled form elements
 
-### `npm start`
+## 🎀 tech stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- react
+- typescript
+- styled-components
+- react-router-dom
+- better-sqlite3
+- google fonts (montserrat)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 📁 project structure
 
-### `npm test`
+```
+src/
+├── components/
+│   ├── CategorySection.tsx   # category section component
+│   ├── Navigation.tsx       # sidebar navigation component
+│   ├── WardrobeItem.tsx     # individual item card component
+│   ├── UploadForm.tsx       # form for adding new items
+│   └── styles.ts            # styled components and theme
+├── context/
+│   └── SidebarContext.tsx   # sidebar state management
+├── services/
+│   └── database.ts          # sqlite database service
+├── types/
+│   └── index.ts             # typescript interfaces and types
+├── App.tsx                  # main application component
+└── index.css               # global styles
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🗄️ database schema
 
-### `npm run build`
+```sql
+CREATE TABLE wardrobe_items (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  item_name TEXT NOT NULL,
+  type TEXT NOT NULL,
+  image_url TEXT NOT NULL,
+  times_worn INTEGER DEFAULT 0,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+)
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 getting started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. clone the repository
+2. install dependencies:
+   ```bash
+   npm install
+   ```
+3. start the development server:
+   ```bash
+   npm start
+   ```
+4. open [http://localhost:3000](http://localhost:3000) in your browser
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📝 changelog
 
-### `npm run eject`
+### version 1.0.0
+- initial release with basic wardrobe management functionality
+- implemented file upload system
+- created responsive grid layout
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### version 1.1.0
+- added styled-components for styling
+- implemented pastel pink and purple theme
+- added hover effects and transitions
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### version 1.2.0
+- integrated montserrat font
+- converted all text to lowercase
+- added sparkle favicon and updated page title
+- improved visual hierarchy with different font weights
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### version 1.3.0
+- added collapsible sidebar navigation
+- improved responsive layout
+- centered content with dynamic width
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### version 1.4.0
+- integrated sqlite database
+- added "times worn" tracking
+- implemented "i wore this today" button
+- added data persistence
+- items now sorted by creation date
 
-## Learn More
+### version 1.4.1
+- enhanced form styling with custom elements
+- added styled file input with preview
+- improved dropdown menu design
+- added emojis and visual feedback
+- consistent styling across all form elements
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🎨 color palette
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- light pink: `#ffd1dc` (buttons, borders)
+- light purple: `#d4a5d6` (category titles, hover states)
+- muted purple: `#9b6b9d` (text, accents)
+- background gradient: `#faf0f5` to `#f3e5f5`
+
+## 💭 future improvements
+
+- add item deletion functionality
+- implement drag-and-drop for organizing items
+- add custom categories
+- add search and filter functionality
+- implement outfit creation feature
+- add wear history with dates
+- add outfit combinations tracking
+- implement sorting options (most/least worn, newest/oldest)
+
+## 📱 responsive design
+
+the app is fully responsive and works on:
+- desktop screens (max-width: 1400px)
+- tablets (max-width: 1200px)
+- mobile devices (max-width: 768px)
+
+features:
+- collapsible sidebar for space efficiency
+- responsive grid layout
+- adaptive content width
+- mobile-friendly buttons and forms
+
+## 🤝 contributing
+
+feel free to contribute to this project by:
+1. forking the repository
+2. creating your feature branch
+3. committing your changes
+4. pushing to the branch
+5. creating a pull request
+
+## 📄 license
+
+this project is licensed under the MIT License.

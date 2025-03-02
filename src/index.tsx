@@ -1,15 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
+import { SidebarProvider } from './context/SidebarContext';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <SidebarProvider>
+        <App />
+      </SidebarProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
