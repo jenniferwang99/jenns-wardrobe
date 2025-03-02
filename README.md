@@ -2,7 +2,7 @@
 
 a cute closet organization app built with React, TypeScript, and styled-components. organize your wardrobe items by category with a beautiful pastel interface and track how often you wear each item.
 
-visit the app: [https://jennwang.github.io/wardrobe](https://jennwang.github.io/wardrobe) ✨
+visit the app: [https://jenniferwang99.github.io/jenns-wardrobe](https://jenniferwang99.github.io/jenns-wardrobe) ✨
 
 ## 🌸 features
 
@@ -85,7 +85,7 @@ to deploy the app to GitHub Pages:
 1. update the `homepage` field in `package.json` with your GitHub Pages URL:
    ```json
    {
-     "homepage": "https://yourusername.github.io/wardrobe"
+     "homepage": "https://jenniferwang99.github.io/jenns-wardrobe"
    }
    ```
 
@@ -94,7 +94,7 @@ to deploy the app to GitHub Pages:
    npm run deploy
    ```
 
-3. visit your GitHub Pages URL to see the live app!
+3. visit [https://jenniferwang99.github.io/jenns-wardrobe](https://jenniferwang99.github.io/jenns-wardrobe) to see the live app!
 
 note: the app uses client-side storage (IndexedDB), so your data is stored locally in your browser.
 

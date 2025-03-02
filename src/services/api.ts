@@ -1,7 +1,10 @@
 import { Category } from '../types';
 import { dbService, WardrobeItem } from './db';
 
-export const UPLOADS_BASE_URL = 'http://localhost:3001';
+// Use relative path for both development and production
+export const UPLOADS_BASE_URL = process.env.NODE_ENV === 'production' 
+  ? '/jenns-wardrobe'  // GitHub Pages path
+  : '';  // Local development path
 
 export type WardrobeItemResponse = WardrobeItem;
 
