@@ -12,8 +12,9 @@ a cute closet organization app built with React, TypeScript, and styled-componen
 - montserrat font with lowercase styling
 - hover effects and smooth transitions
 - collapsible sidebar navigation
-- sqlite database for data persistence
+- client-side data persistence with IndexedDB
 - custom styled form elements
+- create and manage today's outfit selections
 
 ## 🎀 tech stack
 
@@ -21,7 +22,7 @@ a cute closet organization app built with React, TypeScript, and styled-componen
 - typescript
 - styled-components
 - react-router-dom
-- better-sqlite3
+- indexeddb for data storage
 - google fonts (montserrat)
 
 ## 📁 project structure
@@ -32,29 +33,32 @@ src/
 │   ├── CategorySection.tsx   # category section component
 │   ├── Navigation.tsx       # sidebar navigation component
 │   ├── WardrobeItem.tsx     # individual item card component
+│   ├── TodaysOutfit.tsx    # outfit selection component
 │   ├── UploadForm.tsx       # form for adding new items
 │   └── styles.ts            # styled components and theme
 ├── context/
 │   └── SidebarContext.tsx   # sidebar state management
 ├── services/
-│   └── database.ts          # sqlite database service
+│   ├── api.ts              # api service layer
+│   └── db.ts               # indexeddb service
 ├── types/
-│   └── index.ts             # typescript interfaces and types
+│   └── index.ts            # typescript interfaces and types
 ├── App.tsx                  # main application component
 └── index.css               # global styles
 ```
 
-## 🗄️ database schema
+## 🗄️ data structure
 
-```sql
-CREATE TABLE wardrobe_items (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  item_name TEXT NOT NULL,
-  type TEXT NOT NULL,
-  image_url TEXT NOT NULL,
-  times_worn INTEGER DEFAULT 0,
-  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
-)
+The app uses IndexedDB to store the following information for each wardrobe item:
+```typescript
+interface WardrobeItem {
+  id: number;
+  item_name: string;
+  type: 'tops' | 'bottoms' | 'shoes' | 'accessories';
+  image_url: string;
+  times_worn: number;
+  created_at: string;
+}
 ```
 
 ## 🚀 getting started
@@ -94,18 +98,17 @@ CREATE TABLE wardrobe_items (
 - centered content with dynamic width
 
 ### version 1.4.0
-- integrated sqlite database
+- integrated IndexedDB for data persistence
 - added "times worn" tracking
 - implemented "i wore this today" button
 - added data persistence
 - items now sorted by creation date
 
-### version 1.4.1
-- enhanced form styling with custom elements
-- added styled file input with preview
-- improved dropdown menu design
-- added emojis and visual feedback
-- consistent styling across all form elements
+### version 1.5.0
+- added "today's outfit" feature
+- implemented item selection functionality
+- added outfit preview panel
+- enhanced grid layout for better item display
 
 ## 🎨 color palette
 
@@ -120,10 +123,10 @@ CREATE TABLE wardrobe_items (
 - implement drag-and-drop for organizing items
 - add custom categories
 - add search and filter functionality
-- implement outfit creation feature
 - add wear history with dates
 - add outfit combinations tracking
 - implement sorting options (most/least worn, newest/oldest)
+- add outfit saving and history
 
 ## 📱 responsive design
 
