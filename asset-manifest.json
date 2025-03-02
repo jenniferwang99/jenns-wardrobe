@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/jenns-wardrobe/static/css/main.d8ecb026.css",
+    "main.js": "/jenns-wardrobe/static/js/main.a9a300df.js",
+    "static/js/453.5f2e025e.chunk.js": "/jenns-wardrobe/static/js/453.5f2e025e.chunk.js",
+    "index.html": "/jenns-wardrobe/index.html",
+    "main.d8ecb026.css.map": "/jenns-wardrobe/static/css/main.d8ecb026.css.map",
+    "main.a9a300df.js.map": "/jenns-wardrobe/static/js/main.a9a300df.js.map",
+    "453.5f2e025e.chunk.js.map": "/jenns-wardrobe/static/js/453.5f2e025e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d8ecb026.css",
+    "static/js/main.a9a300df.js"
+  ]
+}
